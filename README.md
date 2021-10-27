@@ -24,8 +24,9 @@
     
 </table align="center">
 
-### **Link Trello**
+### **Link Trello & Figma**
 [Trello - Kelompok 3](https://trello.com/b/YllQGGVz/mppl-kelompok-2-endozzer)  
+[Figma - Kelompok 3](https://www.figma.com/file/U1lAFy0Voac7H27dz1NkXg/Endozzer?node-id=0%3A1)
 
 ## Kelompok 3
 |   | NIM | Nama |

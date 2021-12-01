@@ -34,7 +34,7 @@ class IsPatchDeleteAndOwner(BasePermission):
 class IsGetAndInfluenzer(BasePermission):
 
 	def has_permission(self, request, view):
-		print(request.user.is_company == False)
+		# print(request.user.is_company == False)
 		if(request.method == "GET"):
 			return (request.user.is_company == False)
 
@@ -43,7 +43,7 @@ class IsGetAndInfluenzer(BasePermission):
 class IsPostAndInfluenzer(BasePermission):
 
 	def has_permission(self, request, view):
-		print(request.user.is_company == False)
+		# print(request.user.is_company == False)
 		if(request.method == "POST"):
 			return (request.user.is_company == False)
 
@@ -52,7 +52,23 @@ class IsPostAndInfluenzer(BasePermission):
 class IsCompanyAndOwner(BasePermission):
 
 	def has_object_permission(self, request, view, obj):
-		if(request.user.is_company == True):
+
+		from .models import Campaign, JoinCampaign
+
+		if(type(obj) == Campaign):
+			if(request.user.is_company == True):
+				return (obj.author == request.user)
+		elif(type(obj) == JoinCampaign):
+			if(request.user.is_company == True):
+				author = Campaign.objects.get(pk=obj.campaign_id).author
+				return (author == request.user)
+
+		return True
+
+class IsInfluencerAndOwner(BasePermission):
+
+	def has_object_permission(self, request, view, obj):
+		if(request.user.is_company == False):
 			return (obj.author == request.user)
 
 		return True

@@ -1,0 +1,27 @@
+from django.db import models
+from django.dispatch import receiver
+from django.db.models.signals import post_save
+
+# Create your models here.
+
+class Order(models.Model):
+	# order_id = models.CharField(max_length=40, unique=True)
+	created_at = models.DateTimeField(auto_now_add=True)
+	payment_status = models.BooleanField(default=False)
+
+class Transaction(models.Model):
+	# transaction_id = models.CharField(max_length=40, unique=True)
+	created_at = models.DateTimeField(auto_now_add=True)
+	order = models.ForeignKey(Order, on_delete=models.CASCADE)
+	payment_status = models.BooleanField(default=False)
+
+@receiver(post_save, sender=Transaction)
+def update_order_payment_status(sender, instance, created,**kwargs):
+	if(instance.payment_status == True):
+		instance.order.payment_status = True
+		instance.order.save()
+
+# from payment.models import Order, Transaction
+# a = Order.objects.get(order_id="aaa")
+# Transaction.objects.create(transaction_id="bbbb", order=a)
+

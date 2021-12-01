@@ -7,6 +7,7 @@ import About from './view/About';
 import Signup from './view/Signup'
 import Utama from './view/Utama';
 import { makeStyles } from "@material-ui/core/styles";
+import LengkapiData from './view/LengkapiData1';
 
 const useStyles = makeStyles({});
 
@@ -22,6 +23,7 @@ export default function App(){
           <Route exact from="/signup" render={props => <Signup {...props} />} />
           <Route exact from="/about" render={props => <About {...props} />} />
         </Switch>
+        {/* <LengkapiData/> */}
       </Router>
       
     </div>

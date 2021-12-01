@@ -76,7 +76,7 @@ Berikut fitur-fitur yang akan dikembangkan pada aplikasi berdasarkan kebutuhan p
 ## C. Maksud
 [`^ kembali ke atas ^`](#)
 
-Maksud dari pengembangan aplikasi ini adalah membuat sistem perantara yaitu antara influencer dengan pemilik brand (perusahaan) dalam melakukan promosi produk. Hal ini dilakukan untuk mempermudah influencer pemula dalam mencari campaign promosi brand dan dapat menyebarkannya melalui postingan media sosial untuk memperoleh fee.
+Maksud dari pengembangan aplikasi ini adalah membuat sistem perantara yaitu antara influencer dengan pemilik brand (perusahaan) dalam melakukan promosi produk. Hal ini dilakukan untuk mempermudah influencer pemula dalam mencari campaign promosi brand dan dapat menyebarkannya melalui postingan media sosial untuk memperoleh fee .
 
 ## D. Tujuan
 [`^ kembali ke atas ^`](#)

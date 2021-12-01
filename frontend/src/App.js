@@ -1,6 +1,8 @@
 import React from 'react';
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
-
+import './styles/output.css'
+import './index.css';
+import "tailwindcss/tailwind.css"
 import Header from './component/header/Header';
 import Login from './view/login/Login';
 import About from './view/About';
